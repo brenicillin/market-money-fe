@@ -7,6 +7,10 @@ class MarketService
     get_url("http://localhost:3000/api/v0/markets/#{id}")
   end
 
+  def market_vendors(id)
+    get_url("http://localhost:3000/api/v0/markets/#{id}/vendors")
+  end
+
   def get_url(url)
     response = Faraday.get(url)
     JSON.parse(response.body, symbolize_names: true)

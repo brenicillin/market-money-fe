@@ -6,6 +6,12 @@ class MarketFacade
   end
 
   def market(id)
-    market_data = Market.new(MarketService.new.market(id)[:data])
+    Market.new(MarketService.new.market(id)[:data])
+  end
+
+  def market_vendors(id)
+    MarketService.new.market_vendors(id)[:data].map do |vendor_data|
+      Vendor.new(vendor_data)
+    end
   end
 end

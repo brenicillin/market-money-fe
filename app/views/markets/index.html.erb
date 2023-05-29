@@ -1,0 +1,13 @@
+<section id="heading">
+  <h1> Markets </h1>
+</section>
+
+<section id="markets">
+  <% @facade.each do |market| %>
+    <div class="market">
+      <h2><%= market.name %></h2>
+      <p><%= market.city %>, <%= market.state %></p>
+      <%= button_to "More Info", market_path(market.id), method: :get %>
+    </div>
+  <% end %>
+</section>

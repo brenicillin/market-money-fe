@@ -15,5 +15,6 @@ class Market
     @county = data[:attributes][:county]
     @state = data[:attributes][:state]
     @zip = data[:attributes][:zip]
+    @vendors = data[:relationships][:vendors][:data]
   end
 end

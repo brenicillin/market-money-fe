@@ -1,0 +1,10 @@
+<h1><%= @facade.name %></h1>
+
+<section id="contact-info">
+Contact Information:<br/>
+Name: <%= @facade.contact_name %><br/>
+Phone: <%= @facade.contact_phone %><br/>
+Credit Accepted? <% if @facade.credit_accepted == nil %> No <% else %> Yes <% end %><br/>
+
+Description<br/>
+<%= @facade.description %>
